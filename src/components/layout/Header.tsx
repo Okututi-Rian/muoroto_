@@ -89,8 +89,8 @@ export function Header() {
         <header className={cn(
             "sticky top-0 z-50 w-full transition-all duration-500 border-b",
             isScrolled
-                ? "bg-white/90 backdrop-blur-md h-20 border-border shadow-sm"
-                : "bg-white h-24 border-transparent"
+                ? "bg-white/90 backdrop-blur-md h-16 md:h-20 border-border shadow-sm"
+                : "bg-white h-20 md:h-24 border-transparent"
         )}>
             <Container className="h-full flex items-center justify-between">
                 {/* Official Logo */}
@@ -101,7 +101,7 @@ export function Header() {
                             alt="Muoroto FM"
                             width={200}
                             height={60}
-                            className="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                            className="h-8 md:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                             priority
                         />
                         {isPlaying && (
@@ -138,7 +138,7 @@ export function Header() {
                     </SheetTrigger>
                     <SheetContent side="right" className="w-[300px] border-l-0 bg-brand-green text-white p-0 overflow-hidden">
                         <div className="p-8 h-full flex flex-col noise-grain">
-                            <SheetTitle className="text-left font-serif text-3xl text-brand-yellow mb-10 border-b border-white/10 pb-6">
+                            <SheetTitle className="text-left font-serif text-2xl md:text-3xl text-brand-yellow mb-8 md:mb-10 border-b border-white/10 pb-6 uppercase tracking-tight">
                                 Menu
                             </SheetTitle>
                             <nav className="flex flex-col gap-4">
@@ -148,7 +148,7 @@ export function Header() {
                                         href={item.href}
                                         className="text-2xl font-bold hover:text-brand-yellow transition-colors uppercase tracking-tight flex items-center gap-4 group"
                                     >
-                                        <span className="text-brand-yellow/30 text-xs font-mono">0{idx + 1}</span>
+                                        <span className="text-brand-yellow/30 text-[10px] md:text-xs font-mono">0{idx + 1}</span>
                                         {item.label}
                                     </Link>
                                 ))}

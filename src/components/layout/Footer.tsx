@@ -17,8 +17,8 @@ export function Footer() {
                 Muoroto
             </div>
 
-            <Container className="py-20">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 relative z-10">
+            <Container className="py-16 md:py-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 relative z-10">
 
                     {/* Brand & Mission */}
                     <div className="space-y-8">
@@ -132,9 +132,9 @@ export function Footer() {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-black uppercase tracking-[0.4em] text-white/20 relative z-10">
+                <div className="mt-16 md:mt-20 pt-8 md:pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-black uppercase tracking-[0.4em] text-white/20 relative z-10 text-center md:text-left">
                     <div>© {new Date().getFullYear()} Muoroto FM. All Rights Reserved.</div>
-                    <div className="flex gap-8">
+                    <div className="flex gap-6 md:gap-8">
                         <Link href="#" className="hover:text-white transition-colors">Privacy</Link>
                         <Link href="#" className="hover:text-white transition-colors">Terms</Link>
                     </div>

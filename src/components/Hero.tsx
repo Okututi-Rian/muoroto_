@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from '@/components/ui/button';
-import { Play, ArrowRight, Radio } from 'lucide-react';
+import { Play, ArrowRight, Radio, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { Container } from './layout/Section';
 import { usePlayer } from '@/context/PlayerContext';
@@ -24,7 +24,7 @@ export function Hero({ title, subtitle }: HeroProps) {
     ];
 
     return (
-        <section className="relative min-h-[90vh] flex items-center bg-surface-dark overflow-hidden noise-grain pt-20">
+        <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-center bg-surface-dark overflow-hidden noise-grain pt-16 md:pt-20">
             {/* Background decorative elements */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-green/5 skew-x-12 transform origin-bottom translate-x-24 -z-0"></div>
             <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-brand-yellow/5 rounded-full blur-3xl -z-0"></div>
@@ -41,10 +41,10 @@ export function Hero({ title, subtitle }: HeroProps) {
                     </div>
 
                     <div className="space-y-6">
-                        <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tighter leading-[0.85] animate-fade-up">
-                            {title || <>MUOROTO <br /><span className="text-brand-yellow pr-4">FM.</span></>}
+                        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tighter leading-[0.9] md:leading-[0.85] animate-fade-up">
+                            {title || <>MUOROTO <br className="hidden md:block" /><span className="text-brand-yellow pr-4">FM.</span></>}
                         </h1>
-                        <p className="text-xl md:text-2xl text-white/70 max-w-xl leading-relaxed border-l-4 border-brand-yellow pl-8 py-2 animate-fade-up delay-150">
+                        <p className="text-lg md:text-xl lg:text-2xl text-white/70 max-w-xl leading-relaxed border-l-4 border-brand-yellow pl-6 md:pl-8 py-2 animate-fade-up delay-150">
                             {subtitle || '"The Voice of Truth" — Nairobi\'s leading gospel for spiritual nourishment and community empowerment.'}
                         </p>
                     </div>
@@ -54,18 +54,18 @@ export function Hero({ title, subtitle }: HeroProps) {
                             size="lg"
                             onClick={togglePlay}
                             className={cn(
-                                "h-16 px-10 rounded-full font-bold text-lg transition-all duration-500 shadow-2xl live-pulse",
+                                "h-14 md:h-16 px-8 md:px-10 rounded-full font-bold text-base md:text-lg transition-all duration-500 shadow-2xl live-pulse w-full sm:w-auto justify-center",
                                 isPlaying
                                     ? "bg-white text-brand-green hover:bg-white/90"
                                     : "bg-brand-yellow text-brand-green hover:bg-brand-yellow-dark"
                             )}
                         >
                             {isLoading ? (
-                                <Radio className="mr-3 h-6 w-6 animate-pulse" />
+                                <Loader2 className="mr-3 h-5 w-5 md:h-6 md:w-6 animate-spin" />
                             ) : isPlaying ? (
                                 <span className="flex items-center gap-2">Stop Stream</span>
                             ) : (
-                                <Play className="mr-3 h-6 w-6 fill-current" />
+                                <Play className="mr-3 h-5 w-5 md:h-6 md:w-6 fill-current" />
                             )}
                             {isLoading ? 'Connecting...' : isPlaying ? '' : 'Listen Live'}
                         </Button>
@@ -74,7 +74,7 @@ export function Hero({ title, subtitle }: HeroProps) {
                             variant="outline"
                             size="lg"
                             asChild
-                            className="h-16 px-10 rounded-full border-2 border-white/20 text-white hover:bg-white hover:text-brand-green font-bold text-lg transition-all"
+                            className="h-14 md:h-16 px-8 md:px-10 rounded-full border-2 border-white/20 text-white hover:bg-white hover:text-brand-green font-bold text-base md:text-lg transition-all w-full sm:w-auto justify-center"
                         >
                             <Link href="/programs">
                                 Schedule <ArrowRight className="ml-3 h-5 w-5" />

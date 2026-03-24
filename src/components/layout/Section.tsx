@@ -22,7 +22,7 @@ export function Section({
 
     return (
         <section
-            className={cn("py-16 md:py-24 relative overflow-hidden", variants[variant], className)}
+            className={cn("py-12 md:py-24 relative overflow-hidden", variants[variant], className)}
             {...props}
         >
             {container ? <Container>{children}</Container> : children}
@@ -32,7 +32,7 @@ export function Section({
 
 export function Container({ children, className }: { children: React.ReactNode; className?: string }) {
     return (
-        <div className={cn("max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10", className)}>
+        <div className={cn("max-w-7xl mx-auto px-4 md:px-8 relative z-10", className)}>
             {children}
         </div>
     );

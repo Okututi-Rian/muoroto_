@@ -37,8 +37,8 @@ export default async function ProgramsPage() {
                     <div className="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-brand-green/20 border border-brand-green/30 text-brand-yellow font-black text-[10px] uppercase tracking-[0.3em] mb-8 animate-fade-in">
                         98.1 FM • Nairobi, Kenya
                     </div>
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tighter leading-[0.85] mb-8 animate-fade-up">
-                        THE <br />
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tighter leading-[0.9] md:leading-[0.85] mb-8 animate-fade-up">
+                        THE <br className="hidden md:block" />
                         <span className="text-brand-yellow pr-4">SCHEDULE.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-white/70 leading-relaxed border-l-4 border-brand-yellow pl-8 py-2 animate-fade-up delay-150">

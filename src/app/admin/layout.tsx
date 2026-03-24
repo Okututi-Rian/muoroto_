@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
 import { auth, currentUser } from '@clerk/nextjs/server'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
+import { AdminNav } from '@/components/layout/AdminNav'
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
   const { userId } = await auth()
@@ -28,54 +28,13 @@ export default async function AdminLayout({ children }: { children: React.ReactN
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Admin Nav */}
-      <nav className="bg-gray-900 text-white px-6 py-4 flex items-center gap-6">
-        <span className="font-black text-lg tracking-tight">MUOROTO CMS</span>
-        <div className="flex gap-4 ml-4">
-          <Link
-            href="/admin"
-            className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-          >
-            Dashboard
-          </Link>
-          <Link
-            href="/admin/presenters"
-            className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-          >
-            Presenters
-          </Link>
-          <Link
-            href="/admin/programs"
-            className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-          >
-            Programs
-          </Link>
-          <Link
-            href="/admin/news"
-            className="text-sm font-semibold text-gray-300 hover:text-white transition-colors"
-          >
-            News
-          </Link>
-          <Link
-            href="/admin/content"
-            className="text-sm font-semibold text-gray-300 hover:text-white transition-colors border-l border-white/20 pl-4 ml-4"
-          >
-            Content
-          </Link>
-        </div>
-        <div className="ml-auto">
-          <Link
-            href="/"
-            className="text-xs text-gray-400 hover:text-white transition-colors"
-          >
-            ← View Site
-          </Link>
-        </div>
-      </nav>
+    <div className="min-h-screen bg-gray-50 flex flex-col">
+      <AdminNav />
 
       {/* Content */}
-      <main className="max-w-5xl mx-auto px-6 py-10">{children}</main>
+      <main className="max-w-7xl mx-auto w-full px-4 md:px-8 py-8 md:py-12 flex-1">
+        {children}
+      </main>
     </div>
   )
 }
