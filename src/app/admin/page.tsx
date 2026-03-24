@@ -31,7 +31,7 @@ export default async function AdminDashboard() {
           <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mt-1">Programs</div>
         </div>
         <div className="bg-white border border-gray-200 p-6">
-          <div className="text-4xl font-black text-brand-yellow font-serif italic text-blue-600">{newsCount}</div>
+          <div className="text-4xl font-black text-brand-yellow font-serif text-blue-600">{newsCount}</div>
           <div className="text-sm font-semibold text-gray-500 uppercase tracking-wide mt-1">News Articles</div>
         </div>
         <div className="bg-white border border-gray-200 p-6">

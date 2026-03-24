@@ -180,6 +180,9 @@ export function EditPresenterForm({ presenter }: Props) {
                 <label className="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1">
                     Replace Photo (optional, max 5MB)
                 </label>
+                <div className="text-[10px] text-gray-400 mb-2 font-bold uppercase tracking-wider">
+                    Recommended: 1:1 ratio (e.g. 800x800) • Format: JPG, PNG, WebP
+                </div>
                 <input
                     type="file"
                     accept="image/*"

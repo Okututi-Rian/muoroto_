@@ -26,21 +26,34 @@ export default async function Home() {
     programs = []
   }
 
+  let contentMap: Record<string, string> = {}
+  try {
+    const allContent = await (prisma as any).content.findMany()
+    contentMap = allContent.reduce((acc: Record<string, string>, curr: any) => ({ ...acc, [curr.key]: curr.content }), {})
+  } catch (err) {
+    console.error('DB error on content fetch', err)
+  }
+
+  const getContent = (key: string, defaultValue: string) => contentMap[key] || defaultValue
+
   return (
     <div className="flex flex-col min-h-screen">
 
       {/* Redesigned Premium Hero */}
-      <Hero />
+      <Hero 
+        title={getContent('homepage_hero_title', 'MUOROTO FM.')} 
+        subtitle={getContent('homepage_hero_subtitle', '"The Voice of Truth" — Nairobi\'s leading gospel for spiritual nourishment and community empowerment.')}
+      />
 
       {/* Editorial Highlights Section */}
       <Section variant="light" className="border-t border-border/50">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div className="space-y-4">
             <div className="inline-block bg-brand-green/10 text-brand-green text-[10px] font-black uppercase tracking-[0.4em] px-3 py-1 rounded-full">
-              What&apos;s Trending
+              {getContent('homepage_trending_tag', "What's Trending")}
             </div>
             <h2 className="text-4xl md:text-6xl font-serif text-brand-black leading-none">
-              On The <span className="text-brand-green italic">Air.</span>
+              {getContent('homepage_trending_title', "On The Air.")}
             </h2>
             <div className="w-12 h-1 bg-brand-yellow rounded-full"></div>
           </div>
@@ -80,11 +93,11 @@ export default async function Home() {
           </div>
 
           <h2 className="text-4xl md:text-6xl font-serif leading-tight">
-            Affirmative Role in <br /><span className="text-brand-yellow italic">Kenyan Society</span>
+            {getContent('homepage_mission_title', "Affirmative Role in Kenyan Society")}
           </h2>
 
-          <p className="text-2xl md:text-3xl text-white/70 font-light leading-relaxed font-serif italic max-w-2xl mx-auto">
-            &quot;We always produce veracious content through our super talented staff.&quot;
+          <p className="text-2xl md:text-3xl text-white/70 font-light leading-relaxed font-serif max-w-2xl mx-auto">
+            {getContent('homepage_mission_content', '"We always produce veracious content through our super talented staff."')}
           </p>
 
           <div className="grid md:grid-cols-3 gap-12 text-left pt-16 border-t border-white/10">

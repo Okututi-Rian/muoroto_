@@ -19,9 +19,9 @@ export default function ContactPage() {
                         Get In Touch
                     </div>
                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tighter leading-none">
-                        LET&apos;S <span className="text-brand-green italic pr-4">TALK.</span>
+                        LET&apos;S <span className="text-brand-green pr-4">TALK.</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-white/50 max-w-2xl mx-auto italic font-serif">
+                    <p className="text-xl md:text-2xl text-white/50 max-w-2xl mx-auto font-serif">
                         Whether it&apos;s a song request, a testimony, or a business inquiry, we&apos;re here to listen and respond.
                     </p>
                 </div>
@@ -68,8 +68,8 @@ export default function ContactPage() {
                                         <h3 className="text-xl font-bold text-brand-black uppercase tracking-tight">Call / WhatsApp</h3>
                                     </div>
                                     <div className="pl-20 space-y-2">
-                                        <a href="tel:0719303030" className="block text-2xl font-serif italic text-brand-black hover:text-brand-green transition-colors">0719 30 30 30</a>
-                                        <a href="tel:+254703773524" className="block text-2xl font-serif italic text-brand-black hover:text-brand-green transition-colors">+254 703 773 524</a>
+                                        <a href="tel:0719303030" className="block text-2xl font-serif text-brand-black hover:text-brand-green transition-colors">0719 30 30 30</a>
+                                        <a href="tel:+254703773524" className="block text-2xl font-serif text-brand-black hover:text-brand-green transition-colors">+254 703 773 524</a>
                                     </div>
                                 </div>
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
                                         <h3 className="text-xl font-bold text-brand-black uppercase tracking-tight">Direct Mail</h3>
                                     </div>
                                     <div className="pl-20">
-                                        <a href="mailto:muorototv@gmail.com" className="text-2xl font-serif italic text-brand-black hover:text-brand-green transition-colors">
+                                        <a href="mailto:muorototv@gmail.com" className="text-2xl font-serif text-brand-black hover:text-brand-green transition-colors">
                                             muorototv@gmail.com
                                         </a>
                                     </div>
@@ -103,6 +103,8 @@ export default function ContactPage() {
                                     <Link
                                         key={i}
                                         href={social.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className={`w-16 h-16 bg-white border border-gray-100 shadow-lg flex items-center justify-center rounded-2xl text-gray-400 ${social.color} hover:text-white hover:border-transparent transition-all duration-500`}
                                     >
                                         <social.icon className="h-6 w-6" />

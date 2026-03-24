@@ -18,7 +18,7 @@ export function PlayerProvider({ children }: { children: React.ReactNode }) {
     const [isMuted, setIsMuted] = useState(false);
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
-    const STREAM_URL = "http://uk4-vn.mixstream.net:8136/;;";
+    const STREAM_URL = "https://uk4-vn.mixstream.net/;";
 
     useEffect(() => {
         // Initialize audio instance

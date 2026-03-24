@@ -416,6 +416,9 @@ export function CreateProgramForm({ presenters }: CreateProgramFormProps) {
                 <label className="block text-xs font-bold text-gray-700 uppercase tracking-wide mb-1">
                     Image (optional, max 5MB)
                 </label>
+                <div className="text-[10px] text-gray-400 mb-2 font-bold uppercase tracking-wider">
+                    Recommended: 16:9 ratio (e.g. 1280x720) • Format: JPG, PNG, WebP
+                </div>
                 <input
                     type="file"
                     accept="image/*"

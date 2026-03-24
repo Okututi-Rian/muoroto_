@@ -30,7 +30,7 @@ export default async function NewsListingPage() {
                         Latest Coverage
                     </div>
                     <h1 className="text-5xl md:text-7xl font-serif text-brand-black leading-none uppercase">
-                        News & <span className="text-brand-green italic">Insights.</span>
+                        News & <span className="text-brand-green">Insights.</span>
                     </h1>
                     <div className="w-12 h-1 bg-brand-yellow rounded-full"></div>
                 </div>
@@ -69,7 +69,7 @@ export default async function NewsListingPage() {
                                     <h2 className="text-4xl md:text-5xl font-serif font-black text-brand-black leading-tight group-hover:text-brand-green transition-colors">
                                         {featuredArticle.title}
                                     </h2>
-                                    <p className="text-lg text-gray-500 leading-relaxed font-serif italic">
+                                    <p className="text-lg text-gray-500 leading-relaxed font-serif">
                                         {featuredArticle.excerpt}
                                     </p>
                                     <div className="flex items-center text-brand-black font-bold uppercase text-xs tracking-widest group-hover:gap-4 transition-all">

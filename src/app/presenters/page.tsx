@@ -45,11 +45,11 @@ export default async function PresentersPage() {
                             Meet The Team
                         </div>
                         <h1 className="text-6xl md:text-8xl font-serif text-brand-black tracking-tighter leading-none">
-                            OUR <span className="text-brand-green italic">VOICES.</span>
+                            OUR <span className="text-brand-green">VOICES.</span>
                         </h1>
                     </div>
 
-                    <p className="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto font-serif italic leading-relaxed">
+                    <p className="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto font-serif leading-relaxed">
                         Meet the talented individuals who utilize their gifts to produce veracious content and spiritual nourishment for our community.
                     </p>
                 </div>
@@ -109,7 +109,7 @@ export default async function PresentersPage() {
 
                     {presenters.length === 0 && (
                         <div className="col-span-full text-center py-32 rounded-[2rem] border-2 border-dashed border-brand-green/20">
-                            <p className="text-brand-green/30 font-bold uppercase tracking-[0.4em] italic">Meet Our Team Soon</p>
+                            <p className="text-brand-green/30 font-bold uppercase tracking-[0.4em]">Meet Our Team Soon</p>
                         </div>
                     )}
                 </div>

@@ -84,7 +84,7 @@ export default async function ArticlePage({ params }: Props) {
                 <div className="max-w-4xl mx-auto">
                     <div className="bg-white p-8 md:p-16 shadow-2xl relative z-20">
                         {/* Excerpt / Lead */}
-                        <p className="text-xl md:text-3xl text-brand-green font-serif italic mb-12 leading-relaxed border-l-4 border-brand-yellow pl-8">
+                        <p className="text-xl md:text-3xl text-brand-green font-serif mb-12 leading-relaxed border-l-4 border-brand-yellow pl-8">
                             {article.excerpt}
                         </p>
 
@@ -111,7 +111,7 @@ export default async function ArticlePage({ params }: Props) {
             <Section variant="dark" className="text-center py-32">
                 <div className="max-w-2xl mx-auto space-y-8">
                     <h2 className="text-3xl md:text-5xl font-serif font-black text-white uppercase leading-none">
-                        Stay <span className="text-brand-yellow italic">Informed.</span>
+                        Stay <span className="text-brand-yellow">Informed.</span>
                     </h2>
                     <p className="text-white/50 text-sm tracking-widest font-bold uppercase">
                         Muoroto FM - Nairobi&apos;s Voice of Truth

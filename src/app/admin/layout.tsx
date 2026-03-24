@@ -57,6 +57,12 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           >
             News
           </Link>
+          <Link
+            href="/admin/content"
+            className="text-sm font-semibold text-gray-300 hover:text-white transition-colors border-l border-white/20 pl-4 ml-4"
+          >
+            Content
+          </Link>
         </div>
         <div className="ml-auto">
           <Link

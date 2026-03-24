@@ -7,7 +7,12 @@ import { Container } from './layout/Section';
 import { usePlayer } from '@/context/PlayerContext';
 import { cn } from '@/lib/utils';
 
-export function Hero() {
+interface HeroProps {
+    title?: string;
+    subtitle?: string;
+}
+
+export function Hero({ title, subtitle }: HeroProps) {
     const { isPlaying, togglePlay, isLoading } = usePlayer();
 
     // Region Frequencies Data
@@ -37,11 +42,10 @@ export function Hero() {
 
                     <div className="space-y-6">
                         <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tighter leading-[0.85] animate-fade-up">
-                            MUOROTO <br />
-                            <span className="text-brand-yellow italic pr-4">FM.</span>
+                            {title || <>MUOROTO <br /><span className="text-brand-yellow pr-4">FM.</span></>}
                         </h1>
-                        <p className="text-xl md:text-2xl text-white/70 max-w-xl leading-relaxed italic border-l-4 border-brand-yellow pl-8 py-2 animate-fade-up delay-150">
-                            &quot;The Voice of Truth&quot; — Nairobi&apos;s leading gospel for spiritual nourishment and community empowerment.
+                        <p className="text-xl md:text-2xl text-white/70 max-w-xl leading-relaxed border-l-4 border-brand-yellow pl-8 py-2 animate-fade-up delay-150">
+                            {subtitle || '"The Voice of Truth" — Nairobi\'s leading gospel for spiritual nourishment and community empowerment.'}
                         </p>
                     </div>
 

@@ -41,7 +41,7 @@ export function ContactForm() {
                         <div className="absolute inset-0 bg-brand-yellow/20 blur-2xl rounded-full"></div>
                     </div>
                     <div className="space-y-2">
-                        <h3 className="text-3xl font-serif italic">Message Received!</h3>
+                        <h3 className="text-3xl font-serif">Message Received!</h3>
                         <p className="text-white/70 font-medium">Thank you for reaching out. Our team will get back to you shortly.</p>
                     </div>
                     <Button
@@ -64,7 +64,7 @@ export function ContactForm() {
                     <div className="w-8 h-0.5 bg-brand-yellow"></div>
                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-brand-green">Contact Us</span>
                 </div>
-                <CardTitle className="text-4xl font-serif text-brand-black">Send a <span className="text-brand-green italic">Message.</span></CardTitle>
+                <CardTitle className="text-4xl font-serif text-brand-black">Send a <span className="text-brand-green">Message.</span></CardTitle>
                 <CardDescription className="text-base font-medium">
                     Have a song request, testimony, or inquiry? We&apos;re listening.
                 </CardDescription>

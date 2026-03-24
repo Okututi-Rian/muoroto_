@@ -56,7 +56,7 @@ export function ProgramCard({
                         </div>
 
                         <div className="space-y-4">
-                            <h3 className="text-4xl lg:text-5xl font-serif text-brand-black leading-tight group-hover:text-brand-green transition-colors italic">
+                            <h3 className="text-4xl lg:text-5xl font-serif text-brand-black leading-tight group-hover:text-brand-green transition-colors">
                                 {title}
                             </h3>
                             <p className="text-base text-gray-500 line-clamp-3 font-medium leading-relaxed max-w-xl">

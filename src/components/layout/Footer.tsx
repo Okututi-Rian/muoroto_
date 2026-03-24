@@ -27,7 +27,7 @@ export function Footer() {
                                 <div className="p-2 bg-brand-green rounded-lg">
                                     <Radio className="h-6 w-6 text-brand-yellow" />
                                 </div>
-                                <h3 className="text-3xl font-serif text-white tracking-tighter italic">Muoroto <span className="text-brand-yellow font-sans font-black not-italic ml-1">FM.</span></h3>
+                                 <h3 className="text-3xl font-serif text-white tracking-tighter">Muoroto <span className="text-brand-yellow font-sans font-black ml-1">FM.</span></h3>
                             </div>
                             <p className="text-brand-green font-bold uppercase tracking-[0.4em] text-[10px]">Mugambo Wa Ma</p>
                         </div>
@@ -44,6 +44,8 @@ export function Footer() {
                                 <Link
                                     key={i}
                                     href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className={`w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white/40 border border-white/10 ${social.bg} hover:text-white hover:border-transparent transition-all duration-300`}
                                 >
                                     <social.Icon className="h-4 w-4" />
@@ -62,7 +64,7 @@ export function Footer() {
                             {frequencies.map((f, i) => (
                                 <li key={i} className="group cursor-default">
                                     <span className="text-xs uppercase font-bold tracking-widest block text-white/30 group-hover:text-brand-yellow transition-colors">{f.region}</span>
-                                    <span className="text-lg font-serif italic text-white/70 group-hover:text-white transition-colors">{f.freq}</span>
+                                    <span className="text-lg font-serif text-white/70 group-hover:text-white transition-colors">{f.freq}</span>
                                 </li>
                             ))}
                         </ul>

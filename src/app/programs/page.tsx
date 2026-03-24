@@ -39,9 +39,9 @@ export default async function ProgramsPage() {
                     </div>
                     <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif text-white tracking-tighter leading-[0.85] mb-8 animate-fade-up">
                         THE <br />
-                        <span className="text-brand-yellow italic pr-4">SCHEDULE.</span>
+                        <span className="text-brand-yellow pr-4">SCHEDULE.</span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-white/70 leading-relaxed italic border-l-4 border-brand-yellow pl-8 py-2 animate-fade-up delay-150">
+                    <p className="text-xl md:text-2xl text-white/70 leading-relaxed border-l-4 border-brand-yellow pl-8 py-2 animate-fade-up delay-150">
                         Experience the spirit of Gikuyu culture through our carefully curated broadcast lineup.
                         Informed, inspired, and always connected to the truth.
                     </p>
@@ -76,7 +76,7 @@ export default async function ProgramsPage() {
                                 <Clock className="h-16 w-16 opacity-20" />
                             </div>
                             <p className="text-brand-green/40 text-lg font-black uppercase tracking-[0.4em]">Schedule Being Updated</p>
-                            <p className="text-gray-400 text-sm mt-4 font-medium italic">Check back soon for the latest lineup</p>
+                            <p className="text-gray-400 text-sm mt-4 font-medium">Check back soon for the latest lineup</p>
                         </div>
                     )}
                 </div>

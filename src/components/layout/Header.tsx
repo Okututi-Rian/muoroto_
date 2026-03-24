@@ -138,7 +138,7 @@ export function Header() {
                     </SheetTrigger>
                     <SheetContent side="right" className="w-[300px] border-l-0 bg-brand-green text-white p-0 overflow-hidden">
                         <div className="p-8 h-full flex flex-col noise-grain">
-                            <SheetTitle className="text-left font-serif italic text-3xl text-brand-yellow mb-10 border-b border-white/10 pb-6">
+                            <SheetTitle className="text-left font-serif text-3xl text-brand-yellow mb-10 border-b border-white/10 pb-6">
                                 Menu
                             </SheetTitle>
                             <nav className="flex flex-col gap-4">
