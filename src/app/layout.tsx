@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Muoroto FM",
     default: "Muoroto FM - Mugambo Wa Ma",
   },
-  description: "The number one Kikuyu vernacular radio station (Nairobi 98.1 FM, Mt.Kenya Region 94.6 FM, Nakuru 107.8 FM, Kirinyanga/Embu 99.9FM). Stesheni ya Mashinani.",
+  description: "The Number One Kikuyu Vernacular Radio Station (Nairobi 98.1 FM, Mt.Kenya Region 94.6 FM, Nakuru 107.8 FM, Kirinyaga-Embu 99.9FM). Stesheni ya Mashinani.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
